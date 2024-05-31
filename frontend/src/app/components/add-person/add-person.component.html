@@ -1,0 +1,13 @@
+<h2>Ajouter une personne</h2>
+<form (ngSubmit)="addPerson()">
+  <label for="nom">Nom:</label>
+  <input type="text" id="nom" [(ngModel)]="person.nom" name="nom">
+  <br>
+  <label for="prenom">Prénom:</label>
+  <input type="text" id="prenom" [(ngModel)]="person.prenom" name="prenom">
+  <br>
+  <label for="dateDeNaissance">Date de Naissance:</label>
+  <input type="date" id="dateDeNaissance" [(ngModel)]="person.dateDeNaissance" name="dateDeNaissance">
+  <br>
+  <button type="submit">Add</button>
+</form>

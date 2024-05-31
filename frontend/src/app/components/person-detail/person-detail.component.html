@@ -1,0 +1,11 @@
+<h2>{{ person?.nom }} {{ person?.prenom }}</h2>
+<div *ngIf="person">
+  <p>Date of Birth: {{ person.dateDeNaissance }}</p>
+  <h3>Employments</h3>
+  <ul>
+    <li *ngFor="let emploi of person.emplois">
+      {{ emploi.nomEntreprise }} - {{ emploi.poste }}
+    </li>
+  </ul>
+  <a [routerLink]="['/add-employment', person.id]" routerLinkActive="active">Ajouter un emploi</a>
+</div>

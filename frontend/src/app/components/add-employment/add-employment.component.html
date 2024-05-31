@@ -1,0 +1,12 @@
+<h2>Ajouter un emploi</h2>
+<form (ngSubmit)="addEmployment()">
+  <label for="nomEntreprise">Nom de l'Entreprise:</label>
+  <input type="text" id="nomEntreprise" [(ngModel)]="employment.nomEntreprise" name="nomEntreprise">
+  <br>
+  <label for="poste">Poste:</label>
+  <input type="text" id="poste" [(ngModel)]="employment.poste" name="poste">
+  <br>
+  <label for="dateDebut">Date de Début:</label>
+  <input type="date" id="dateDebut" [(ngModel)]="employment.dateDebut" name="dateDebut">
+  <br>
+  <button type="submit">Add</button>
