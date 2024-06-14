@@ -1,7 +1,13 @@
+package com.example.demo.controller;
+
+import com.example.demo.model.Personne;
+import com.example.demo.service.PersonneService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/personnes")
@@ -17,7 +23,7 @@ public class PersonneController {
         return personneService.savePersonne(personne);
     }
 
-    @ApiOperation(value = "Récupère toutes les personnes")
+    @ApiOperation(value = "Récupère toutes les personnes par ordre alphabétique")
     @GetMapping
     public List<Personne> getAllPersonnes() {
         return personneService.getAllPersonnes();
